@@ -1,11 +1,11 @@
-(ns clojure-api-starter.core
+(ns clojure-gql-starter.core
   (:use org.httpkit.server)
   (:require [compojure.handler :refer [api]]
             [ring.middleware.json :refer [wrap-json-params wrap-json-response]]
             [ring.middleware.cors :refer [wrap-cors]]
-            [clojure-api-starter.routes.core :refer [routes]]
+            [clojure-gql-starter.routes.core :refer [routes]]
             [ring.middleware.reload :refer [wrap-reload]]
-            [clojure-api-starter.service.db :refer [db-conn db-root-namespace]])
+            [clojure-gql-starter.service.db :refer [db-conn db-root-namespace]])
   (:gen-class))
 
 (def app
@@ -19,4 +19,4 @@
   (db-conn)
   (db-root-namespace)
   (run-server (wrap-reload #'app) {:port 3000})
-  (println "clojure-api-starter"))
+  (println "clojure-gql-starter"))

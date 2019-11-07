@@ -1,11 +1,9 @@
-(ns clojure-api-starter.routes.core
+(ns clojure-gql-starter.routes.core
   (:require [compojure.core :refer [defroutes GET]]
             [compojure.route :refer [not-found]]
-            [ring.util.response :refer [response]]
-            [clojure-api-starter.routes.internal.user :refer [user-routes]]))
+            [ring.util.response :refer [response]]))
 
 (defroutes routes
-  (GET "/" []
+  (GET "/graphql" []
     (response {:message "index"}))
-  (user-routes)
   (not-found (response {:message "not found"})))

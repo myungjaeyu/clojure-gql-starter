@@ -1,6 +1,6 @@
-(ns clojure-api-starter.service.user
+(ns clojure-gql-starter.service.user
   (:require [toucan.db :as db]
-            [clojure-api-starter.models.user :refer [User]]))
+            [clojure-gql-starter.models.user :refer [User]]))
 
 (defn gets-user []
   (db/select User))

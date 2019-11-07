@@ -1,4 +1,4 @@
-(ns clojure-api-starter.service.db
+(ns clojure-gql-starter.service.db
   (:require [toucan.db :as db]
             [toucan.models :as models]
             [environ.core :refer [env]]))
@@ -11,4 +11,4 @@
                                   :password (env :db-password)}))
 
 (defn db-root-namespace []
-  (models/set-root-namespace! 'clojure-api-starter.models))
+  (models/set-root-namespace! 'clojure-gql-starter.models))

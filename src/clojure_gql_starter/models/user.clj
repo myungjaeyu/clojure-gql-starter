@@ -1,4 +1,4 @@
-(ns clojure-api-starter.models.user
+(ns clojure-gql-starter.models.user
   (:require [toucan.models :refer [defmodel]]))
 
 (defmodel User :user)
