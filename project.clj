@@ -8,5 +8,6 @@
                  [ring-cors "0.1.13"]
                  [toucan "1.12.0"]
                  [org.postgresql/postgresql "42.2.5"]
+                 [graphql-clj "0.2.6"]
                  [environ "1.1.0"]]
   :profiles {:dev {:dependencies [[javax.servlet/servlet-api "2.5"]]}})
