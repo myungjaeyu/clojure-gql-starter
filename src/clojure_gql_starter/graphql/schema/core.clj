@@ -7,9 +7,15 @@
   }
 
   type QueryRoot {
-    user: User
+    users: [User]
+    user(id: Int): User
+  }
+
+  type Mutation {
+    createUser(name: String): User
   }
 
   schema {
     query: QueryRoot
+    mutation: Mutation
   }")
